@@ -1,27 +1,33 @@
 <template>
   <div class="list">
     <div class="listheader">
-      <p class="list-title">{{ title }}></p>
-      <div class="list-counter">total: {{ totalCardlinst }}</div>
-      <div class="deletelist" @click="removeList">❌</div>
+      <p class="list-title">{{ title }}</p>
+      <p class="list-counter">total: {{ totalCardInList }}</p>
+      <div class="deletelist" @click="removeList">×</div>
     </div>
-    <card v-for="(item,index) in cards"
-      :body="item.body"
-      :key="item.id"
-      :cardindex="index"
-      :listindex="listindex"
+    <draggable group="cards"
+               :list="cards"
+               @end="$emit('change')">
+      <Card v-for="(item, index) in cards"
+            :body="item.body"
+            :key="item.id"
+            :cardIndex="index"
+            :listIndex="listIndex"
       />
-
-    <card-add :listindex="listindex"/>
+      <CardAdd :listIndex="listIndex" />
+    </draggable>
   </div>
 </template>
-
 <script>
-import Card from './Card.vue'
-import CardAdd from './CardAdd.vue'
-
+import draggable from 'vuedraggable'
+import CardAdd from './CardAdd'
+import Card from './Card'
 export default {
-  components: { CardAdd, Card },
+  components: {
+    CardAdd,
+    Card,
+    draggable
+  },
   props: {
     title: {
       type: String,
@@ -32,22 +38,21 @@ export default {
       required: true
     },
     cards: {
-      type:String,
+      type: Array,
       required: true
     },
   },
   computed: {
-    totalCardlist() {
+    totalCardInList() {
       return this.cards.length
     }
   },
   methods: {
     removeList: function() {
-      if(confirm('ほんとにこのリストを削除しますか？')){
-        this.$store.dispatch('removelist', {listindex: this.listindex })
+      if(confirm('本当にこのリストを削除しますか？')){
+        this.$store.dispatch('removelist', { listIndex: this.listIndex })
       }
     },
   }
 }
-
 </script>

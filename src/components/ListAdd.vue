@@ -3,18 +3,17 @@
     <input v-model="title"
            type="text"
            class="text-input"
-           placeholder="Add new list"
+           placeholder="NEW MEMO"
            @focusin="startEditing"
            @focusout="finishEditing"
     >
     <button type="submit"
             class="add-button"
             v-if="isEditing || titleExists">
-      Add
+      追加する！
     </button>
   </form>
 </template>
-
 <script>
 export default {
   data: function() {
@@ -26,7 +25,6 @@ export default {
   computed: {
     classList() {
       const classList = ['addlist']
-
       if (this.isEditing) {
         classList.push('active')
       }
@@ -40,7 +38,7 @@ export default {
     },
   },
   methods: {
-    addList() {
+    addList: function() {
       this.$store.dispatch('addlist', { title: this.title })
       this.title = ''
     },

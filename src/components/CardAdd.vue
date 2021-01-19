@@ -1,11 +1,11 @@
 <template>
   <form :class="classList" @submit.prevent="addCardToList">
     <input v-model="body"
-          type="text"
-          class="text-input"
-          placeholder="Add new card"
-          @focusin="startEditing"
-          @focusout="finishEditing"
+           type="text"
+           class="text-input"
+           placeholder="新しいメモを追加する"
+           @focusin="startEditing"
+           @focusout="finishEditing"
     />
     <button type="submit"
             class="add-button"
@@ -14,13 +14,12 @@
     </button>
   </form>
 </template>
-
 <script>
 export default {
   props: {
     listIndex: {
       type: Number,
-      required: true
+      required: true,
     }
   },
   data: function() {
@@ -32,13 +31,13 @@ export default {
   computed: {
     classList() {
       const classList = ['addcard']
-      if(this.isEditing) {
+      if (this.isEditing) {
         classList.push('active')
       }
-      if(this.bodyExists) {
+      if (this.bodyExists) {
         classList.push('addable')
       }
-      return classList;
+      return classList
     },
     bodyExists() {
       return this.body.length > 0

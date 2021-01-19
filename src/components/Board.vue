@@ -1,40 +1,53 @@
 <template>
   <div>
     <header>
-      MY MEMO LIST
+      うっかり防止 メモ
     </header>
     <main>
-      <p class="info-line">ALL:{{ totalCardCount }}task</p>
-      <div class="list-index">
-<list v-for="(item, index) in lists"
-      :key="item.id"
-      :title="item.title"
-      :cards="item.cards"
-      :listIndex="index"
-/>/>      <list-add/>
-      </div>
+      <p class="info-line">全部で: {{ totalCardCount }} MEMO</p>
+      <draggable :list="lists"
+            @end="movingList"
+            class="list-index">
+        <list v-for="(item, index) in lists"
+              :key="item.id"
+              :title="item.title"
+              :cards="item.cards"
+              :listIndex="index"
+              @change="movingCard"
+        />
+        <list-add/>
+      </draggable>
     </main>
   </div>
 </template>
 
 <script>
-import ListAdd from './ListAdd.vue'
+import draggable from 'vuedraggable'
 import List from './List'
+import ListAdd from './ListAdd'
 import { mapState } from 'vuex'
 
 export default {
-  components: { 
+  components: {
     ListAdd,
     List,
+    draggable
+  },
+  computed: {
+    ...mapState([
+      'lists'
+    ]),
+    totalCardCount() {
+      return this.$store.getters.totalCardCount
+    }
+  },
+  methods: {
+    movingCard: function() {
+      this.$store.dispatch('updateList', { lists: this.lists })
     },
-    computed: {
-      ...mapState([
-        'lists'
-      ]),
-      totalCarCount() {
-        return this.$strong.getters.totalCardCount
-      }
-    },
-  
+    movingList: function() {
+      this.$store.dispatch('updateList', { lists: this.lists })
+    }
+  }
 }
 </script>
