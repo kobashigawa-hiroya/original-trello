@@ -5,7 +5,7 @@
     </header>
     <main>
       <p class="info-line">ALL: 0 task</p>
-      <list-add />
+      <list-add/>
     </main>
   </div>
 </template>
