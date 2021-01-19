@@ -1,11 +1,11 @@
 <template>
   <form :class="classList" @submit.prevent="addCardToList">
     <input v-model="body"
-           type="text"
-           class="text-input"
-           placeholder="Add new card"
-           @focusin="startEditing"
-           @focusout="finishEditing"
+          type="text"
+          class="text-input"
+          placeholder="Add new card"
+          @focusin="startEditing"
+          @focusout="finishEditing"
     />
     <button type="submit"
             class="add-button"

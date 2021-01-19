@@ -4,13 +4,14 @@
       MY MEMO LIST
     </header>
     <main>
-      <p class="info-line">ALL: 0 task</p>
+      <p class="info-line">ALL:{{ totalCardCount }}task</p>
       <div class="list-index">
 <list v-for="(item, index) in lists"
       :key="item.id"
       :title="item.title"
+      :cards="item.cards"
       :listIndex="index"
-/>      <list-add/>
+/>/>      <list-add/>
       </div>
     </main>
   </div>
@@ -30,6 +31,9 @@ export default {
       ...mapState([
         'lists'
       ]),
+      totalCarCount() {
+        return this.$strong.getters.totalCardCount
+      }
     },
   
 }
