@@ -2,12 +2,12 @@
   "name": "orijinal-trello",
   "version": "0.1.0",
   "private": true,
+  "main": "app.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+   "start": "node app.js",
+   "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
+   "dependencies": {
     "bulma": "^0.9.1",
     "core-js": "^3.6.5",
     "vue": "^2.6.11",
