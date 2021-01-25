@@ -1,4 +1,5 @@
 module.exports = {
-  publicPath: '/orijinal-trello/',
-  outputDir: 'docs'
+  outputDir: 'docs',
+  assetsDir: './',
+  publicPath: './'
 }
