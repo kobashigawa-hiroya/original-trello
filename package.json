@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "node your-script.js"
-  },
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"  },
   "dependencies": {
     "bulma": "^0.9.1",
     "core-js": "^3.6.5",
