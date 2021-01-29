@@ -3,8 +3,12 @@
     <button class="close-button" @click="removeCardFromList">
       ×
     </button>
+      <!-- clickイベント時にemoveCardFromListメソッドをハンドル -->
+
     <div class="body">
       {{ body }}
+  <!-- マスタッシュ構文でデータバインド -->
+
     </div>
   </div>
 </template>
@@ -28,6 +32,7 @@ export default {
     removeCardFromList() {
       if(confirm('ホンマに消します？')) {
         this.$store.dispatch('removeCardFromList', { cardIndex: this.cardIndex, listIndex: this.listIndex })
+//click時にremoveCardFromListをハンドル！
       }
     }
   },

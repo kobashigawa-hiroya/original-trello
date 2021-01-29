@@ -8,16 +8,22 @@
            @focusin="startEditing"
            @focusout="finishEditing"
     />
+        <!-- イベントハンドラ①focusin="startEditing"フォーカスされる ②@focusout="finishEditing"フォーカス外す -->
+
     <!-- v-modelにbodyを定義し、dataプロパティとバインド-->
     <button type="submit"
             class="add-button"
             v-if="isEditing || bodyExists">
       Add
+        <!--  v-ifでフォーカスされている時、入力されている時titleExistsを指定したのでどちらかがtrueになるとボタンが表示-->
+        <!--  テキストが入力された時(bodyExists)、さらにformにstyles.cssのaddableクラスを動的に追加。-->
+
     </button>
   </form>
 </template>
 <script>
 export default {
+  //propsで受け取った値は直接更新してはいけない
   props: {
     listIndex: {
       type: Number,

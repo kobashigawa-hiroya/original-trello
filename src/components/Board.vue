@@ -5,6 +5,8 @@
     </header>
     <main>
       <p class="info-line">全部で: {{ totalCardCount }} MEMO</p>
+           <!-- class="list-index" → draggable class="list-indexに修正"でこれでドラッグ&ドロップはできる -->
+
       <draggable :list="lists"
             @end="movingList"
             class="list-index">
@@ -15,6 +17,9 @@
               :listIndex="index"
               @change="movingCard"
         />
+           <!-- ↑これでドラッグ&ドロップされるたびにデータ更新 -->
+  <!-- endイベントを発火し、movingCardメソッドを発火！ -->
+
         <list-add/>
       </draggable>
     </main>
@@ -48,6 +53,7 @@ export default {
     },
     movingList: function() {
       this.$store.dispatch('updateList', { lists: this.lists })
+//リストを並び替えた時イベントが発火し、ストアのupdateListメソッドを呼び出す
     }
   }
 }
