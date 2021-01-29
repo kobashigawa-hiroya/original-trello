@@ -7,9 +7,11 @@
            @focusin="startEditing"
            @focusout="finishEditing"
     >
+    <!-- イベントハンドラ①focusin="startEditing"フォーカスされる ②@focusout="finishEditing"フォーカス外す -->
     <button type="submit"
             class="add-button"
             v-if="isEditing || titleExists">
+  <!--  v-ifでフォーカスされている時、入力されている時titleExistsを指定したのでどちらかがtrueになるとボタンが表示-->
       追加する！
     </button>
   </form>
@@ -44,6 +46,7 @@ export default {
     },
     startEditing() {
       this.isEditing = true
+      //フォーカスされている時にスタイルを当てる
     },
     finishEditing() {
       this.isEditing = false

@@ -35,6 +35,7 @@ export default {
   },
   computed: {
     ...mapState([
+//スプレット演算子でcomputedのローカルのオブジェクトと一緒に定義できる
       'lists'
     ]),
     totalCardCount() {

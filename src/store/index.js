@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const savedLists = localStorage.getItem('trello-lists')
+//ここでlocalstorageに保存したリストを取得
 
 const store = new Vuex.Store({
   state: {
@@ -38,6 +39,7 @@ const store = new Vuex.Store({
     },
     removelist(state, payload) {
       state.lists.splice(payload.listIndex, 1)
+      //mutationsのremovelistでは受けとったリストをspliceで削除
     },
     addCardToList(state, payload) {
       state.lists[payload.listIndex].cards.push({
@@ -79,6 +81,10 @@ const store = new Vuex.Store({
 
 store.subscribe((mutation, state) => {
   localStorage.setItem('trello-lists', JSON.stringify(state.lists))
+  //保存するときは任意のキーを設定する！localStorage.setItem('設定するキー', 文字列型のデータ)
+
 })
+//データの状態を更新後にlocalStorageへデータ状態を保存
+//localStorageにはjson形式の文字列型でデータが保存されているのでJSON.parse(取得データ)で変換する必要がある
 
 export default store

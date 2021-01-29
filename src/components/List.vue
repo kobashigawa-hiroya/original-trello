@@ -4,6 +4,7 @@
       <p class="list-title">{{ title }}</p>
       <p class="list-counter">total: {{ totalCardInList }}</p>
       <div class="deletelist" @click="removeList">×</div>
+     <!-- クリックイベント時にremoveListメソッドをハンドル -->
     </div>
     <draggable group="cards"
                :list="cards"
@@ -28,10 +29,13 @@ export default {
     Card,
     draggable
   },
+  //props受け取る方を指定
   props: {
     title: {
       type: String,
+      //String型で受け取る
       required: true
+      //必ず受け取る事
     },
     listIndex: {
       type: Number,

@@ -1,5 +1,6 @@
 <template>
   <form :class="classList" @submit.prevent="addCardToList">
+    <!-- サブイベント時に addCardToListメソッドをハンドリング-->
     <input v-model="body"
            type="text"
            class="text-input"
@@ -7,6 +8,7 @@
            @focusin="startEditing"
            @focusout="finishEditing"
     />
+    <!-- v-modelにbodyを定義し、dataプロパティとバインド-->
     <button type="submit"
             class="add-button"
             v-if="isEditing || bodyExists">
@@ -25,6 +27,7 @@ export default {
   data: function() {
     return {
       body: '',
+//addCardToListメソッドを定義し、呼び出し
       isEditing: false,
     }
   },
