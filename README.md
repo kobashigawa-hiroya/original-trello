@@ -29,14 +29,16 @@ https://kobashigawa-hiroya.github.io/original-trello/
 # 使い方
 
 ## メモを作成
-![trello1](https://user-images.githubusercontent.com/56257230/106314823-a6121800-62ad-11eb-98e7-8a742c2ce4e0.gif)
+
+<img src="https://user-images.githubusercontent.com/56257230/106314823-a6121800-62ad-11eb-98e7-8a742c2ce4e0.gif" width="100%">
 - new memoをクリックし、メモを入力！　完了したら『追加する！』押すと追加される
 
 
-![trello2](https://user-images.githubusercontent.com/56257230/106315271-5da72a00-62ae-11eb-964f-abc05c9a4c59.gif)
-- 
- 
 
+<img src="https://user-images.githubusercontent.com/56257230/106315271-5da72a00-62ae-11eb-964f-abc05c9a4c59.gif" width="100%">
+
+ 
+ 
 ### v-modelを使ってデータバインディング
 - :value = "title"で dataプロパティで定義したtitle をinputのvalueと紐付け
 
