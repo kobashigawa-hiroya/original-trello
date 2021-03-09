@@ -1,6 +1,6 @@
 
 
-# うっかり防止APP（リポジトリ/プロジェクト/OSSなどの名前）
+# クラス週案早見表（リポジトリ/プロジェクト/OSSなどの名前）
  <img width="1369" alt="スクリーンショット 2021-01-27 22 04 35" src="https://user-images.githubusercontent.com/56257230/106212581-431d7400-620e-11eb-885e-cada01a7e6f9.png">
 
 
@@ -10,7 +10,7 @@
 https://kobashigawa-hiroya.github.io/original-trello/
  
 # 作成した経緯
-- 時折うっかりと忘れ物をしたりすることがあったので、スケジュール管理を行うため作成。
+- クラスの活動時、場所の確保・確認を円滑に行いたいと思い作成
 - Vue.jsの基本を学ぶ
 
 
@@ -28,10 +28,10 @@ https://kobashigawa-hiroya.github.io/original-trello/
  
 # 使い方
 
-## メモを作成
+## クラスを作成
 
 <img src="https://user-images.githubusercontent.com/56257230/106314823-a6121800-62ad-11eb-98e7-8a742c2ce4e0.gif" width="100%">
-- new memoをクリックし、メモを入力！　完了したら『追加する！』押すと追加される
+- クラスを追加をクリックし、クラス名を入力！　完了したら『追加する！』押すと追加される
 
 
 
@@ -114,4 +114,8 @@ import draggable from 'vuedraggable'
 <img width="634" alt="スクリーンショット 2021-01-30 7 18 38" src="https://user-images.githubusercontent.com/56257230/106333394-ea141580-62cb-11eb-8416-d98afe6db727.png">
 - コンポーネントが自立し管理されるのでデータにアクセスできる
 
+# アンケート
+- 全体の活動状況が可視化されているので、どのクラスがどこで活動をしているのか、またヘルプにスムーズに入れて良かった
+- 活動時に他のクラスと使用場所が被ってしまう事を未然に防げた
+- クラス人数を記載できたら尚いいかも
  
