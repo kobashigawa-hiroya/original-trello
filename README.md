@@ -1,7 +1,7 @@
 
 
 # クラス週案早見表（リポジトリ/プロジェクト/OSSなどの名前）
- <img width="1369" alt="スクリーンショット 2021-01-27 22 04 35" src="https://user-images.githubusercontent.com/56257230/106212581-431d7400-620e-11eb-885e-cada01a7e6f9.png">
+<img width="1667" alt="スクリーンショット 2021-03-09 18 13 22" src="https://user-images.githubusercontent.com/56257230/110448753-d054c200-8104-11eb-8c3f-917fa4bc1edd.png">
 
 
  
