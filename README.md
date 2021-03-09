@@ -30,7 +30,9 @@ https://kobashigawa-hiroya.github.io/original-trello/
 
 ## クラスを作成
 
-<img src="https://user-images.githubusercontent.com/56257230/106314823-a6121800-62ad-11eb-98e7-8a742c2ce4e0.gif" width="100%">
+
+<img src="https://user-images.githubusercontent.com/56257230/110449885-ff1f6800-8105-11eb-8ca6-c2b2c7ff1c41.gif" width="100%">
+
 - クラスを追加をクリックし、クラス名を入力！　完了したら『追加する！』押すと追加される
 
 
