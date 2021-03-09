@@ -37,8 +37,8 @@ https://kobashigawa-hiroya.github.io/original-trello/
 
 
 
-<img src="https://user-images.githubusercontent.com/56257230/106315271-5da72a00-62ae-11eb-964f-abc05c9a4c59.gif" width="100%">
-
+<img src="https://user-images.githubusercontent.com/56257230/110451081-304c6800-8107-11eb-8675-feece7c8933d.gif" width="100%">
+- Vue.Draggable使いドラック＆ドロップを実装
  
  
 ### v-modelを使ってデータバインディング
