@@ -1,10 +1,10 @@
 <template>
   <div>
     <header>
-      うっかり防止 メモ
+      クラス週案 早見表
     </header>
     <main>
-      <p class="info-line">全部で: {{ totalCardCount }} MEMO</p>
+      <p class="info-line">全部で: {{ totalCardCount }} </p>
            <!-- class="list-index" → draggable class="list-indexに修正"でこれでドラッグ&ドロップはできる -->
 
       <draggable :list="lists"

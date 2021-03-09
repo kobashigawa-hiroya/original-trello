@@ -3,7 +3,7 @@
     <input v-model="title"
            type="text"
            class="text-input"
-           placeholder="NEW MEMO"
+           placeholder="クラスを追加する"
            @focusin="startEditing"
            @focusout="finishEditing"
     >
