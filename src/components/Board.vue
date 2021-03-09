@@ -4,7 +4,7 @@
       クラス週案 早見表
     </header>
     <main>
-      <p class="info-line">全部で: {{ totalCardCount }} 活動</p>
+      <p class="info-line">全部で: {{ totalCardCount }} 活動です！</p>
            <!-- class="list-index" → draggable class="list-indexに修正"でこれでドラッグ&ドロップはできる -->
 
       <draggable :list="lists"
