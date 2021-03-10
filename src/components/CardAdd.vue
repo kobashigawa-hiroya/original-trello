@@ -4,7 +4,7 @@
     <input v-model="body"
            type="text"
            class="text-input"
-           placeholder="活動を追加する"
+           placeholder="活動を追加する？"
            @focusin="startEditing"
            @focusout="finishEditing"
     />
